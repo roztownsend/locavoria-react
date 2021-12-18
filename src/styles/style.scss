@@ -155,7 +155,7 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-    main {max-width: 85%;
+    .main {max-width: 85%;
     
     > button {
             width: 80%;
@@ -163,7 +163,6 @@ nav {
     }
 
     .pitch {
-        width: 90%;
         margin-top: 2rem;
     }    
     .pitch__display {
@@ -209,7 +208,6 @@ nav {
     > .fa-times {
         display: block;
         float: right;
-        margin-top: -1rem;
         font-size: 2rem;
         background-color: transparent;
         border: 0;
@@ -225,6 +223,8 @@ nav {
 form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    width: 100%;
     padding: 1rem;
     font-family: "Open Sans", sans-serif;
     text-align: left;
@@ -254,10 +254,34 @@ form {
         margin: auto;
         background-color: $genfont;
         font-size: 1.5rem;
+        transition: background-color .5s;
 
         &:hover, &:focus, &:active {
             background-color: $highlighter2;
         }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .modal-form {
+        margin-top: 1rem;
+        width: 100%;
+        height: 100vh;
+        overflow: scroll;
+        padding: 1rem .5rem 1rem .2rem;
+        
+        > .modal-form__h2 {
+            font-size: 1.5rem;
+        }
+
+        > .fa-times {
+            margin-right: 1rem;
+        }
+    }
+
+    form {
+        width: 90%;
     }
 }
 
